@@ -1,4 +1,5 @@
 import SEO from '@/SEO'
+import { PAGE_SEO } from '@/SEO/constants'
 import ToTopBtn from '@/components/Buttons/toTop'
 import FirstBlock from '@/components/FirstBlock'
 import AboutUsBlock from '@/components/aboutUsBlock'
@@ -14,7 +15,12 @@ export default function Home({cities, hotels, galleries, tours}: {cities: IBasic
 
   return (
       <>
-        <SEO />
+        <SEO
+          title={PAGE_SEO.home.title}
+          description={PAGE_SEO.home.description}
+          keywords={PAGE_SEO.home.keywords}
+          path="/"
+        />
         <FirstBlock />
         <PopularTours data={tours?.data?.items} />
         <PopularHotels data={hotels?.data?.items} />

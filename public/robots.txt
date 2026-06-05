@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /payment/
+Disallow: /api/
+
+Sitemap: https://easttour.uz/sitemap.xml

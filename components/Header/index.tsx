@@ -55,7 +55,7 @@ const HeaderClient = () => {
                         <Image 
                             className="xl:w-[150px] md:w-[120px] w-[100px] my-[15px] flex-shrink-0" 
                             src={scrollHeight > 150 ? DarkLogo : LightLogo} 
-                            alt={scrollHeight > 150 ? "DarkLogo" : "LightLogo"} 
+                            alt="East Tour - Uzbekistan travel agency logo" 
                             priority 
                             width={150}
                             height={120}

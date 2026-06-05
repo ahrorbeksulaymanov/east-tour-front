@@ -1,4 +1,5 @@
 import SEO from '@/SEO'
+import { PAGE_SEO } from '@/SEO/constants'
 import ToTopBtn from '@/components/Buttons/toTop'
 import AllTransports from '@/components/Transports'
 import TransportFirst from '@/components/Transports/firstBlock'
@@ -30,8 +31,10 @@ export default function Transports ({transportTypes, transports}: {transportType
   return (
       <>
         <SEO
-          title='Transports'
-          description='Our vehicles are always ready for your service with East Tour'
+          title={PAGE_SEO.transports.title}
+          description={PAGE_SEO.transports.description}
+          keywords={PAGE_SEO.transports.keywords}
+          path="/transports"
         />
         <TransportFirst />
         <AllTransports transportTypes={transportTypes?.data} transports={transports?.data?.items} />

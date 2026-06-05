@@ -1,4 +1,5 @@
 import SEO from "@/SEO";
+import { SITE_URL } from "@/SEO/constants";
 import ToTopBtn from "@/components/Buttons/toTop";
 import TourCalculator from "@/components/TourView/calculator";
 import TourCalendar from "@/components/TourView/calendar";
@@ -43,6 +44,21 @@ export default function TourView(params: {data: ITour, message: string, status: 
         title={params?.data?.title}
         description={params?.data?.description}
         image={FILE_URL + params?.data?.mainPhoto}
+        path={`/all-tours/${params?.data?.slug}`}
+        type="article"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "TouristTrip",
+          name: params?.data?.title,
+          description: params?.data?.description,
+          image: params?.data?.mainPhoto ? FILE_URL + params?.data?.mainPhoto : undefined,
+          url: `${SITE_URL}/all-tours/${params?.data?.slug}`,
+          provider: {
+            "@type": "TravelAgency",
+            name: "East Tour",
+            url: SITE_URL,
+          },
+        }}
       />
       <TourViewFirst title={params?.data?.title} />
       <TourViewSlider data={params?.data} />

@@ -1,4 +1,5 @@
 import SEO from '@/SEO'
+import { PAGE_SEO } from '@/SEO/constants'
 import PopularCitiesSlider from '@/components/AllTours/citiesSlider'
 import ToTopBtn from '@/components/Buttons/toTop'
 import AllHotels from '@/components/Hotels'
@@ -34,8 +35,10 @@ export default function Hotels({cities, hotels, regions}: {cities: IBasic<ICity[
   return (
       <>
         <SEO
-          title='Hotels'
-          description='Select your the best hotel in Uzbekistan'
+          title={PAGE_SEO.hotels.title}
+          description={PAGE_SEO.hotels.description}
+          keywords={PAGE_SEO.hotels.keywords}
+          path="/hotels"
         />
         <HotelsFirst />
         <AllHotels data={hotels?.data?.items} regions={regions?.data} />

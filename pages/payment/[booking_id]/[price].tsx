@@ -1,4 +1,5 @@
 import SEO from "@/SEO";
+import { PAGE_SEO } from "@/SEO/constants";
 import ToTopBtn from "@/components/Buttons/toTop";
 import PaymentComponent from "@/components/TourView/payment";
 import { useRouter } from "next/router";
@@ -18,8 +19,9 @@ export default function PaymentPage() {
     return (
         <>
             <SEO
-                title='Payment'
-                description='Payment for Tours on Uzbekistan with East Tour'
+                title={PAGE_SEO.payment.title}
+                description={PAGE_SEO.payment.description}
+                noindex
             />
             <PaymentComponent />
             <ToTopBtn />

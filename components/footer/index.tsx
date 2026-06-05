@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="container mx-auto relative z-[3]">
                 <div className="grid grid-cols-12">
                     <div className="lg:col-span-3 md:col-span-6 col-span-12">
-                        <Image className="md:w-[150px] w-[100px]" src={DarkLogo} alt="Logo" />
+                        <Image className="md:w-[150px] w-[100px]" src={DarkLogo} alt="East Tour logo" />
                         <p className=" mt-[44px] text-[15px]">Book your trip in minute, get full <br /> Control for much longer.</p>
                     </div>
                     <div className="lg:col-span-6 md:col-span-6 col-span-12 md:my-0 my-7">

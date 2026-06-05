@@ -1,4 +1,5 @@
 import SEO from '@/SEO'
+import { PAGE_SEO } from '@/SEO/constants'
 import AllTours from '@/components/AllTours'
 import AllToursFirst from '@/components/AllTours/firstBlock'
 import PopularCitiesSlider from '@/components/AllTours/citiesSlider'
@@ -11,8 +12,10 @@ export default function Tours({tours, cities}: {tours: IBasic<ITour[]>, cities: 
   return (
       <>
         <SEO
-          title='Tours on Uzbekistan'
-          description='Popular Tours on Uzbekistan with East Tour'
+          title={PAGE_SEO.tours.title}
+          description={PAGE_SEO.tours.description}
+          keywords={PAGE_SEO.tours.keywords}
+          path="/all-tours"
         />
         <AllToursFirst />
         <AllTours data={tours?.data?.items} />

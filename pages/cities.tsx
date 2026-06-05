@@ -1,4 +1,5 @@
 import SEO from '@/SEO'
+import { PAGE_SEO } from '@/SEO/constants'
 import ToTopBtn from '@/components/Buttons/toTop'
 import AllCities from '@/components/Cities'
 import CitiesFirst from '@/components/Cities/firstBlock'
@@ -10,8 +11,10 @@ export default function Cities ({cities} : {cities: IBasic<ICity[]>}) {
   return (
       <>
         <SEO
-          title='Cities'
-          description='Plan your perfect Cities in Uzbekistan'
+          title={PAGE_SEO.cities.title}
+          description={PAGE_SEO.cities.description}
+          keywords={PAGE_SEO.cities.keywords}
+          path="/cities"
         />
         <CitiesFirst />
         <AllCities data={cities?.data?.items} />

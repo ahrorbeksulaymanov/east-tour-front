@@ -6,7 +6,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Layout from '@/components/Layouts';
 import NextNProgress from 'nextjs-progressbar';
-import SEO from '@/SEO';
 
 export default function App({ Component, pageProps }: AppProps) {    
 
@@ -37,7 +36,6 @@ export default function App({ Component, pageProps }: AppProps) {
   
   return (
     <div>
-      <SEO />
       <NextNProgress color="#FFB800" startPosition={0.3} stopDelayMs={100} height={1} showOnShallow={true} />
       <Layout>
         <Component {...pageProps} />

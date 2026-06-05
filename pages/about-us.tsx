@@ -1,4 +1,5 @@
 import SEO from '@/SEO'
+import { PAGE_SEO } from '@/SEO/constants'
 import AboutC from '@/components/AboutUs'
 import EmployeesSlider from '@/components/AboutUs/employeesSlider'
 import AboutUsFirst from '@/components/AboutUs/firstBlock'
@@ -12,8 +13,10 @@ export default function AboutUs({users}: {users: IBasic<IEmployee[]>}) {
   return (
       <>
         <SEO
-          title='About East Tour'
-          description='Hey, We are the EastTour Brief History About East Tour.'
+          title={PAGE_SEO.about.title}
+          description={PAGE_SEO.about.description}
+          keywords={PAGE_SEO.about.keywords}
+          path="/about-us"
         />
         <AboutUsFirst />
         <AboutC />
